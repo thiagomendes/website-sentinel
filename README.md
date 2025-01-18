@@ -20,7 +20,7 @@ Este projeto é uma aplicação simples para monitorar alterações em um site e
 
 ## Requisitos
 
-- **Python 3.7 ou superior**
+- **Python 3.x**
 - **Dependências Python**:
   - Flask
   - BeautifulSoup4
