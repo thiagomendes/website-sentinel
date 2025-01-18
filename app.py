@@ -84,11 +84,14 @@ def monitor_site():
 @app.route("/")
 def index():
     """Exibe os resultados na página principal."""
+    # Contar o número de alterações detectadas
+    change_count = sum(1 for entry in data_storage if entry["status"] == "Alteração detectada")
     return render_template(
         "index.html",
         data=data_storage[::-1],  # Exibe os registros em ordem decrescente
         refresh_interval=CHECK_INTERVAL,
-        site_url=site_url
+        site_url=site_url,
+        change_count=change_count  # Passa o número de alterações para o template
     )
 
 @app.route("/fake-site.html")
