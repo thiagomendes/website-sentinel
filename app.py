@@ -100,7 +100,8 @@ def fake_site():
     return send_from_directory("./templates", "fake-site.html")
 
 if __name__ == "__main__":
-    # Inicia o monitoramento em uma thread separada
-    Thread(target=monitor_site, daemon=True).start()
-    # Inicia o servidor Flask
-    app.run(debug=True, port=5000)
+    import os
+    # Use a porta definida pelo Azure ou a 5000 para testes locais
+    port = int(os.environ.get("PORT", 5000))
+    # Escutar no host 0.0.0.0 para aceitar conexões externas
+    app.run(host="0.0.0.0", port=port)
