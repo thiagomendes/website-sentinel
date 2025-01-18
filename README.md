@@ -50,9 +50,9 @@ Este projeto é uma aplicação simples para monitorar alterações em um site e
    - Acesse [http://127.0.0.1:5000](http://127.0.0.1:5000) no navegador para visualizar o histórico de verificações.
 
 2. Simule um site para teste:
-   - Acesse [http://127.0.0.1:5001/site_simulado.html](http://127.0.0.1:5001/site_simulado.html) para ver o site simulado.
+   - Acesse [http://127.0.0.1:5001/fake-site.html](http://127.0.0.1:5001/fake-site.html) para ver o site simulado.
 
-3. Modifique o arquivo `site_simulado.html`:
+3. Modifique o arquivo `fake-site.html`:
    - Alterações no conteúdo do `<body>` serão detectadas e exibidas no monitoramento.
 
 ## Estrutura do Projeto
@@ -60,9 +60,9 @@ Este projeto é uma aplicação simples para monitorar alterações em um site e
 ```plaintext
 .
 ├── app.py                 # Código principal do aplicativo
-├── site_simulado.html     # Página HTML para simulação de alterações
 ├── templates/
 │   └── index.html         # Interface web do monitoramento
+│   └── fake-site.html     # Página HTML para simulação de alterações
 ├── requirements.txt       # Lista de dependências do projeto
 ├── README.md              # Documentação do projeto
 ```
@@ -70,7 +70,7 @@ Este projeto é uma aplicação simples para monitorar alterações em um site e
 ## Configurações
 
 - **URL do site monitorado**:
-  Por padrão, o aplicativo monitora o arquivo `site_simulado.html` rodando localmente. Para alterar o site monitorado, modifique a variável `site_url` em `app.py`:
+  Por padrão, o aplicativo monitora o arquivo `fake-site.html` rodando localmente. Para alterar o site monitorado, modifique a variável `site_url` em `app.py`:
   ```python
   site_url = "http://exemplo.com"
   ```
@@ -94,7 +94,7 @@ Linhas com **alterações detectadas** são destacadas com fundo amarelo.
 
 ### Simulação de Alterações
 
-1. Conteúdo inicial no `site_simulado.html`:
+1. Conteúdo inicial no `fake-site.html`:
    ```html
    <p>Este é o conteúdo inicial do site.</p>
    ```
