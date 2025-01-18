@@ -11,7 +11,7 @@ app = Flask(__name__)
 CHECK_INTERVAL = 300  # Intervalo em segundos para verificar o site
 
 # Dados globais
-site_url = "http://127.0.0.1:5000/fake-site.html"  # URL do site simulado
+site_url = "https://iaa.ufpr.br/"  # URL do site simulado
 data_storage = []  # Armazena tentativas de verificação
 last_hash = None
 
