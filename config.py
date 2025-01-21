@@ -1,7 +1,7 @@
 # config.py
 
 # URL do site a ser monitorado
-SITE_URL = "https://iaa.ufpr.br/"
+SITE_URL = "https://iaa.ufpr.br/iaa2025-processo-seletivo-para-ingresso-na-iaa/"
 
 # Cabeçalhos para simular um navegador
 HEADERS = {
